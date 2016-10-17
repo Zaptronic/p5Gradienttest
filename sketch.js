@@ -22,13 +22,12 @@ function setup() {
     fsat.add(gradientControl, 'greenB', 0, 254);
     fsat.add(gradientControl, 'blueB', 0, 254);
 
+    gui.remember(gradientControl);
+
 }
 
 function draw() {
     setGradient(0, 0, windowWidth, windowHeight, colorSetterA, colorSetterB, X_AXIS);
-    if (frameCount%100 === 0) {
-        console.log(colorSetterA);
-    }
 
     var redA = gradientControl.redA;
     var greenA = gradientControl.greenA;
